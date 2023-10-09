@@ -1,0 +1,12 @@
+/* CSS file syntax
+.className{
+  property : value;
+  property : value;
+} */
+
+/* HTML file syntax
+<HTMLKeyword class="className"> </HTMLKeyword> */
+
+.heading{
+  color: red;
+}

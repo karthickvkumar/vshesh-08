@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link href="./basics.css" rel="stylesheet" />
+  </head>
   <body>
 
-    <h1>HTML Forms</h1>
+    <h1 class="heading">HTML Forms</h1>
 
-    <label>Enter your Name</label>
+    <label class="heading">Enter your Name</label>
     <input type="text" placeholder="Enter your First Name" value="karthick" disabled/>
     <br />
     
@@ -41,7 +43,33 @@
     <input type="radio" name="gender" />Male
     <input type="radio" name="gender" />Female
     <input type="radio" name="gender" />NA
+    <br />
 
+    <label>Select your hobbies</label>
+    <input type="checkbox" />Cricket
+    <input type="checkbox" />Chess
+    <input type="checkbox" />Football
+    <input type="checkbox" />Tennis
+    <input type="checkbox" />Golf
+    <input type="checkbox" />Basketball
+    <br />
+
+    <label>Select your Qualification</label>
+    <select>
+      <option selected disabled>Please select your Qualification</option>
+      <option>UG</option>
+      <option>High School</option>
+      <option>PG</option>
+      <option>Masters</option>
+      <option>B.E</option>
+      <option>B.Tech</option>
+      <option>B.Com</option>
+    </select>
+    <br/>
+
+    <label>Enter your Address</label>
+    <textarea placeholder="Enter you address"></textarea>
+    <br/>
     <!-- HTML element are classified into 2 sections
     1. Block Level element
        a) Always start on a new Line
@@ -51,7 +79,7 @@
        a) Does not start on a new Line
        b) It will take only the width as it needed -->
 
-    <h1>HTML IFrame</h1>
+    <h1 class="heading">HTML IFrame</h1>
     <iframe src="https://www.lipsum.com/" width="400" height="300"></iframe>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eaGwDnvi7hU?si=bPvdNBfA5y6BUisF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
