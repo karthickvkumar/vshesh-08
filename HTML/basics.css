@@ -7,6 +7,20 @@
 /* HTML file syntax
 <HTMLKeyword class="className"> </HTMLKeyword> */
 
-.heading{
-  color: red;
+.heading {
+  color:rgb(131, 20, 129);
+  background-color: rgb(255, 234, 0);
+  text-align: center; /* center, left, right - It work for block level element*/
+  text-decoration-line: overline underline; /*underline, line-through, overline*/
+  text-decoration-color: red;
+  text-decoration-style: solid; /* solid, dotted, dashed, double, wavy */
+  text-decoration-thickness: 2px;
+  text-transform: capitalize; /*lowercase, uppercase, capitalize */
+}
+
+.paragraph{
+  text-indent: 100px;
+  letter-spacing: 5px;
+  line-height: 2.5;
+  word-spacing: 15px;
 }
