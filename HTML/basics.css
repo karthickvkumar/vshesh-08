@@ -16,6 +16,7 @@
   text-decoration-style: solid; /* solid, dotted, dashed, double, wavy */
   text-decoration-thickness: 2px;
   text-transform: capitalize; /*lowercase, uppercase, capitalize */
+  font-family: 'Dancing Script', cursive;
 }
 
 .paragraph{
@@ -23,4 +24,28 @@
   letter-spacing: 5px;
   line-height: 2.5;
   word-spacing: 15px;
+  font-size: 24px;
+  font-weight: bolder; /* 100,...900, bold, bolder, lighter, normal */
+  font-style: normal; /*normal, italic  */
+  font-family: 'Dancing Script', cursive; /* serif, sans-serif, monospace, cursive, fantasy */
+}
+
+/* Absolute Length
+1. Fixed size 
+2. It will appear same in all devices */
+
+.absolute-box{
+  width: 500px;
+  height: 200px;
+  background-color: blueviolet;
+}
+
+/* Relative Length 
+1. Dynamic Size
+2. It will apper different in all devices */
+
+.relative-box{
+  width: 50vw;
+  height: 25vh;
+  background-color: brown;
 }
