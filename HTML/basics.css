@@ -49,3 +49,23 @@
   height: 25vh;
   background-color: brown;
 }
+
+.heading-border{
+  border-style: solid;
+  /* border-top-style: dashed;
+  border-bottom-style: solid;
+  border-left-style: double;
+  border-right-style: dotted; */
+
+  border-width: 3px;
+  border-color: #741ba7;
+  border-radius: 30px;
+
+  /* border: 2px solid red; */
+}
+
+.relative-heading{
+  border: 2px solid red;
+  padding-left: 50px;
+  margin-left: 50px;
+}
