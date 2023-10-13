@@ -72,7 +72,7 @@
 
 .website-background{
   background-color: aliceblue;
-  background-image: url("./shinchan.png");
+  /* background-image: url("./shinchan.png"); */
   /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZvIr-JQQivHCqAiTWnoZfukGw0N9sqFEVyq8gHRyWMIHyvR_gT51G2WuFJaAEHm5Wmh0&usqp=CAU"); */
   background-repeat: no-repeat; /* no-repeat, repeat, repeat-x, repeat-y */
   background-size: 100vw 100vh; /* width height */
@@ -102,4 +102,29 @@
   height: 200px;
   border: 2px solid black;
   overflow: auto;
+}
+
+/* Mobile Resoltions */
+@media only screen and (min-width : 0px) and (max-width : 480px) {
+  .website-background{
+    background-color: red;
+  }
+}
+/* iPads, Tablets  Resoltions */
+@media only screen and (min-width : 481px) and (max-width : 768px){
+  .website-background{
+    background-color: blue;
+  }
+}
+/*Small screens, laptops Resoltions */
+@media only screen and (min-width : 769px) and (max-width : 1024px){
+  .website-background{
+    background-color: green;
+  }
+}
+/*Desktops, large screens Resoltions */
+@media only screen and (min-width : 1025px) and (max-width : 1200px){
+  .website-background{
+    background-color: yellow;
+  }
 }
