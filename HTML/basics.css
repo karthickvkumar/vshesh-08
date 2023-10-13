@@ -77,3 +77,29 @@
   background-repeat: no-repeat; /* no-repeat, repeat, repeat-x, repeat-y */
   background-size: 100vw 100vh; /* width height */
 }
+
+.table-look{
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.column-name{
+  width: 150px;
+}
+
+.column-email{
+  width: 300px;
+}
+
+.highlight-red{
+  background-color: red;
+  color: white;
+}
+
+.small-box{
+  width: 250px;
+  height: 200px;
+  border: 2px solid black;
+  overflow: auto;
+}
