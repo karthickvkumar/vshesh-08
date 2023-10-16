@@ -1,0 +1,31 @@
+.outer-container{
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid red;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.body{
+  margin: 0px;
+}
+
+.section-1{
+  height: 35%;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.section-2{
+  height: 25%;
+  border: 2px solid red;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.section-3{
+  height: 35%;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
