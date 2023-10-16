@@ -14,6 +14,8 @@
   height: 35%;
   border: 2px solid red;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }
 
 .section-2{
@@ -27,5 +29,27 @@
 .section-3{
   height: 35%;
   border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.inner-section-1{
+  border: 2px solid black;
+  width: 25%;
+}
+
+.inner-section-2{
+  border: 2px solid black;
+  width: 75%;
+}
+
+.heading-content{
+  border: 2px solid blue;
+  height: 35%;
+  box-sizing: border-box;
+}
+
+.heading-desc{
+  border: 2px solid blue;
+  height: 65%;
   box-sizing: border-box;
 }
