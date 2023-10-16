@@ -1,0 +1,15 @@
+.container-1{
+  width: 75vw;
+  height: 50vh;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row; /* row | row-reverse | column | column-reverse */
+  justify-content: space-evenly; /* flex-start | flex-end | center | space-between | space-around | space-evenly (Alignment will happen in horizontal direction)*/ 
+  align-items : center ; /* flex-start | flex-end | center */
+}
+
+.small-box{
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+}
