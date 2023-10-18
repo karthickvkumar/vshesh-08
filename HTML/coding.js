@@ -23,3 +23,62 @@ var result = true;
 // undefined - A variable has been created but its value will not be assigned
 
 var future_referene;
+
+// Object Type / Non-Primitve / User Defined 
+
+// Object - It is a collection of key and value pair
+// syntax 
+// var variable_name = {
+//   key : value,
+//   key : value,
+//   key : value
+// }
+
+// key - similar to variable name (It should be a proper and meaningful name, contain only A-Z, a-z, 0-9, _, $)
+
+var first_name = "mr.abc";
+var last_name = "zyx";
+var age = 24;
+var roll_number = 78846585;
+var standard = "XI";
+
+var student_information = {
+  first_name : "mr.abc",
+  last_name : "zyx",
+  age : 24,
+  roll_number : "457AER856",
+  standard : "XI"
+};
+
+// Array - It is a List of Data and it should have similar data type
+// syntax 
+// var variable_name = [value1, value2, value3, ... , valueN];
+
+var student_list = [
+  {
+    first_name : "mr.abc",
+    last_name : "zyx",
+    age : 24,
+    roll_number : "457AER856",
+    standard : "XI"
+  },
+  {
+    first_name : "mr.abc",
+    last_name : "zyx",
+    age : 24,
+    roll_number : "457AER856",
+    standard : "XI"
+  },
+  {
+    first_name : "mr.abc",
+    last_name : "zyx",
+    age : 24,
+    roll_number : "457AER856",
+    standard : "XI"
+  }
+];
+
+console.log(student_information);
+
+console.log(student_list);
+console.log(first_name);
