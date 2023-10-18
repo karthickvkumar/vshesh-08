@@ -82,3 +82,21 @@ console.log(student_information);
 
 console.log(student_list);
 console.log(first_name);
+
+// Function - It is used to write code (Block of code)
+// syntax - Function Definition 
+// function function_name(){
+//   we should write code inisde
+// }
+
+// syntax - Function Invocation (To run the function)
+// onclick="function_name()" (via HTML Attribut)
+
+// function - keyword
+// function_name - Placeholder (It should be a proper and meaningful name, contain only A-Z, a-z, 0-9, _, $)
+
+function printWelcomeMessage(){
+  var message = "Hello! Good Day";
+  console.log(message);
+  alert(message);
+}
