@@ -90,13 +90,37 @@ console.log(first_name);
 // }
 
 // syntax - Function Invocation (To run the function)
-// onclick="function_name()" (via HTML Attribut)
+// onclick="function_name()" (via HTML Attribute)
 
 // function - keyword
 // function_name - Placeholder (It should be a proper and meaningful name, contain only A-Z, a-z, 0-9, _, $)
 
 function printWelcomeMessage(){
-  var message = "Hello! Good Day";
+  // var message = "Hello! Good Day";
+  var message = prompt("Enter your message");
   console.log(message);
   alert(message);
 }
+
+
+// Operators
+// 1. Arithmetic Operator +, -, *, / , %, ++, --
+// 2. Assignment Operator = 
+// 3. Comparision Operator < (less than) <= (less than or equal to) > (greater than) >= (greater than or equal to) == (equality) != (not equality) ===, !==
+// 4. Logical Operator && (AND), || (OR), ! (NOT)
+
+// AND &&
+// true && true = true
+// true && false = false
+// false && true = false
+// false && false = false
+
+// OR || 
+// true || true = true
+// true || false = true
+// false || true = true
+// false || false = false
+
+// NOT !
+// !true = false
+// !false = true
