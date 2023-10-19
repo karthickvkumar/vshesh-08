@@ -124,3 +124,31 @@ function printWelcomeMessage(){
 // NOT !
 // !true = false
 // !false = true
+
+// If Else Condition 
+// syntax 
+// if(condition){
+//   if block TRUE 
+// }
+// else{
+//   else block FLASE
+// }
+
+// Problem Statement 
+// Find whether a given user age is eligible to Vote in India
+
+// Solution 
+// 1. To pass a number to my javascript program (user age)
+// 2. To write a code, it should verify
+//  2.1 - If the number is greater than or equal to 18 --- The user is eligible for Vote
+//  2.2 - If the number is less than 18 -- The user is Not eligible to Vote
+
+function check_voiting_eligiblity(){
+  var age = prompt("Enter you Age");
+  if(age >= 18){
+    alert("The user is eligible for Vote")
+  }
+  else{
+    alert("The user is Not eligible for Vote")
+  }
+}
