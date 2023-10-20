@@ -184,3 +184,28 @@ function check_age_catorgory(){
   }
 }
 
+// Loop 
+// syntax
+// for(intialization; condition; increment/decrement ){
+//  code 
+// }
+
+for(var count = 1; count <= 20; count++){
+  console.log("The loop is running on count ", count);
+}
+
+// Problem Statment 
+// To find all even number for the given N number of Limit 
+// 1. To pass a number value (Nth number)
+// 2. Number % 2 == 0 --- The Number is even 
+// 3. Create loop -> From 1 to Nth number
+
+function findEvenNumbers(){
+  var lastNumber = prompt("Enter the Last Number");
+  for(var startNumber = 1; startNumber <= lastNumber; startNumber++){
+    if(startNumber % 2 == 0){
+      console.log(startNumber, "is a even number");
+    }
+  }
+}
+
