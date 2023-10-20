@@ -146,9 +146,41 @@ function printWelcomeMessage(){
 function check_voiting_eligiblity(){
   var age = prompt("Enter you Age");
   if(age >= 18){
-    alert("The user is eligible for Vote")
+    alert("The user is eligible for Vote");
   }
   else{
-    alert("The user is Not eligible for Vote")
+    alert("The user is Not eligible for Vote");
   }
 }
+
+// Multiple IF Else Condition 
+// synatx 
+// if(Condition){
+
+// }
+// else if(Condition){
+
+// }
+// else{
+
+// }
+
+// Problem Statement:
+// Find whether the given user age belong to which Age Category 
+// 1. Minor - User age is less than 18
+// 2. Major - User age is greater than or equal to 18 and less then 60
+// 3. Senior - User age is greater or equal to 60
+
+function check_age_catorgory(){
+  var age = prompt("Enter you Age");
+  if(age < 18){
+    alert("User belongs to Minor Category");
+  }
+  else if(age >= 18 && age < 60){
+    alert("User belongs to Major Category")
+  }
+  else{
+    alert("User belongs to Senior Category")
+  }
+}
+
