@@ -12,7 +12,7 @@
 // variable_name -> Placeholder (It should be a proper and meaningful name, contain only A-Z, a-z, 0-9, _, $)
 // value -> input data
 
-var rollnumber = 45786565; 
+var rollnumber = 45786565;
 
 var email_id = "kathick212@gmail.com";
 
@@ -43,11 +43,11 @@ var roll_number = 78846585;
 var standard = "XI";
 
 var student_information = {
-  first_name : "mr.abc",
-  last_name : "zyx",
-  age : 24,
-  roll_number : "457AER856",
-  standard : "XI"
+  first_name: "mr.abc",
+  last_name: "zyx",
+  age: 24,
+  roll_number: "457AER856",
+  standard: "XI"
 };
 
 // Array - It is a List of Data and it should have similar data type
@@ -56,25 +56,25 @@ var student_information = {
 
 var student_list = [
   {
-    first_name : "mr.abc",
-    last_name : "zyx",
-    age : 24,
-    roll_number : "457AER856",
-    standard : "XI"
+    first_name: "mr.abc",
+    last_name: "zyx",
+    age: 24,
+    roll_number: "457AER856",
+    standard: "XI"
   },
   {
-    first_name : "mr.abc",
-    last_name : "zyx",
-    age : 24,
-    roll_number : "457AER856",
-    standard : "XI"
+    first_name: "mr.abc",
+    last_name: "zyx",
+    age: 24,
+    roll_number: "457AER856",
+    standard: "XI"
   },
   {
-    first_name : "mr.abc",
-    last_name : "zyx",
-    age : 24,
-    roll_number : "457AER856",
-    standard : "XI"
+    first_name: "mr.abc",
+    last_name: "zyx",
+    age: 24,
+    roll_number: "457AER856",
+    standard: "XI"
   }
 ];
 
@@ -95,7 +95,7 @@ console.log(first_name);
 // function - keyword
 // function_name - Placeholder (It should be a proper and meaningful name, contain only A-Z, a-z, 0-9, _, $)
 
-function printWelcomeMessage(){
+function printWelcomeMessage() {
   // var message = "Hello! Good Day";
   var message = prompt("Enter your message");
   console.log(message);
@@ -143,12 +143,12 @@ function printWelcomeMessage(){
 //  2.1 - If the number is greater than or equal to 18 --- The user is eligible for Vote
 //  2.2 - If the number is less than 18 -- The user is Not eligible to Vote
 
-function check_voiting_eligiblity(){
+function check_voiting_eligiblity() {
   var age = prompt("Enter you Age");
-  if(age >= 18){
+  if (age >= 18) {
     alert("The user is eligible for Vote");
   }
-  else{
+  else {
     alert("The user is Not eligible for Vote");
   }
 }
@@ -171,15 +171,15 @@ function check_voiting_eligiblity(){
 // 2. Major - User age is greater than or equal to 18 and less then 60
 // 3. Senior - User age is greater or equal to 60
 
-function check_age_catorgory(){
+function check_age_catorgory() {
   var age = prompt("Enter you Age");
-  if(age < 18){
+  if (age < 18) {
     alert("User belongs to Minor Category");
   }
-  else if(age >= 18 && age < 60){
+  else if (age >= 18 && age < 60) {
     alert("User belongs to Major Category")
   }
-  else{
+  else {
     alert("User belongs to Senior Category")
   }
 }
@@ -190,7 +190,7 @@ function check_age_catorgory(){
 //  code 
 // }
 
-for(var count = 1; count <= 20; count++){
+for (var count = 1; count <= 20; count++) {
   console.log("The loop is running on count ", count);
 }
 
@@ -200,12 +200,55 @@ for(var count = 1; count <= 20; count++){
 // 2. Number % 2 == 0 --- The Number is even 
 // 3. Create loop -> From 1 to Nth number
 
-function findEvenNumbers(){
+function findEvenNumbers() {
   var lastNumber = prompt("Enter the Last Number");
-  for(var startNumber = 1; startNumber <= lastNumber; startNumber++){
-    if(startNumber % 2 == 0){
+  for (var startNumber = 1; startNumber <= lastNumber; startNumber++) {
+    if (startNumber % 2 == 0) {
       console.log(startNumber, "is a even number");
     }
   }
 }
 
+// Switch Case 
+// syntax 
+// switch(expression){
+//   case value :
+//     code block
+//     break;
+//   case value :
+//     code block
+//     break;
+
+//   default:
+//     code block
+// }
+
+// Progam - To create a program for simple arithmetic operations 
+// Input - number1, symbol, number2 
+
+function calculator() {
+  var number1 = prompt("Enter Number 1");
+  var symbol = prompt("Enter one arithmetic operator (+,-,*,/)");
+  var number2 = prompt("Enter Number 2");
+  var result;
+  switch (symbol) {
+    case '+':
+      result = number1 + number2;
+      alert(result);
+      break;
+    case '-':
+      result = number1 - number2;
+      alert(result);
+      break;
+    case '*':
+      result = number1 * number2;
+      alert(result);
+      break;
+    case '/':
+      result = number1 / number2;
+      alert(result);
+      break;
+    default:
+      alert("Invalid arithmetic operator");
+  }
+}
