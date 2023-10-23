@@ -233,7 +233,7 @@ function calculator() {
   var result;
   switch (symbol) {
     case '+':
-      result = number1 + number2;
+      result = parseInt(number1) + parseInt(number2);
       alert(result);
       break;
     case '-':
@@ -252,3 +252,8 @@ function calculator() {
       alert("Invalid arithmetic operator");
   }
 }
+
+// Error - Bug
+// 1. Uncaught SyntaxError - Mistake in the program syntax (format) (Getting red color line in console)
+// 2. Uncaught ReferenceError - Mistake in Vairiable or Function Name (Getting red color line in console) 
+// 3. Logical Error - Incorrect output value (No red color line in console)
