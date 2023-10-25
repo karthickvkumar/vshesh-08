@@ -273,3 +273,50 @@ function calculator() {
 // catch(exception){
 //   Inform error to user 
 // }
+
+// Scope - The way how program access variable 
+// 1. Local Scope - Defining a variable inside a function (we cannot access variable outside the function where we definied it)
+// 2. Global Scope - Defining a variable outside a function (It can be accessable inside any function)
+
+var message_global = "Good Day!";
+
+function welcomeMessage(){
+  var message = "Hello All! Good Day";
+  alert(message_global);
+}
+
+function greetingMessage(){
+  alert(message_global);
+}
+
+// Timers 
+// setTimeout - It is used to delay the code execution 
+// syntax
+// setTimeout(function(){
+//   code logic
+// }, milliseconds);
+
+// 1 second - 1000 milliseconds
+
+function delayCode(){
+  alert("Delay code function exection started");
+
+  setTimeout(function(){
+    alert("Time Delay code executed");
+  }, 5000);
+}
+
+
+// setInterval  - It is used to run a code in given time interval 
+// syntax 
+// setInterval(function(){
+//  code logic
+// }, milliseconds);
+
+function TimeLoop(){
+  alert("Time Loop function exection started");
+
+  setInterval(function(){
+    alert("Time Loop code executed");
+  }, 5000);
+}
