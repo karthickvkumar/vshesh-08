@@ -227,29 +227,35 @@ function findEvenNumbers() {
 // Input - number1, symbol, number2 
 
 function calculator() {
-  var number1 = prompt("Enter Number 1");
-  var symbol = prompt("Enter one arithmetic operator (+,-,*,/)");
-  var number2 = prompt("Enter Number 2");
-  var result;
-  switch (symbol) {
-    case '+':
-      result = parseInt(number1) + parseInt(number2);
-      alert(result);
-      break;
-    case '-':
-      result = number1 - number2;
-      alert(result);
-      break;
-    case '*':
-      result = number1 * number2;
-      alert(result);
-      break;
-    case '/':
-      result = number1 / number2;
-      alert(result);
-      break;
-    default:
-      alert("Invalid arithmetic operator");
+  try{
+    var number1 = prompt("Enter Number 1");
+    var symbol = prompt("Enter one arithmetic operator (+,-,*,/)");
+    var number2 = prompt("Enter Number 2");
+    var result;
+    switch (symbol) {
+      case '+':
+        result = parseInt(number3) + parseInt(number2);
+        alert(result);
+        break;
+      case '-':
+        result = number1 - number2;
+        alert(result);
+        break;
+      case '*':
+        result = number1 * number2;
+        alert(result);
+        break;
+      case '/':
+        result = number1 / number2;
+        alert(result);
+        break;
+      default:
+        alert("Invalid arithmetic operator");
+    }
+  }
+  catch(exception){
+    console.error(exception);
+    alert("Something went wrong, pls try later");
   }
 }
 
@@ -257,3 +263,13 @@ function calculator() {
 // 1. Uncaught SyntaxError - Mistake in the program syntax (format) (Getting red color line in console)
 // 2. Uncaught ReferenceError - Mistake in Vairiable or Function Name (Getting red color line in console) 
 // 3. Logical Error - Incorrect output value (No red color line in console)
+
+// Exception Handling / Error Handling
+// Run Time Error - There might be a reference or syntax error - But program fail to find it during initally (Error happend during program execution)
+// syntax 
+// try{
+//  All our logic inside the try block 
+// }
+// catch(exception){
+//   Inform error to user 
+// }
