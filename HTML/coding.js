@@ -312,11 +312,30 @@ function delayCode(){
 // setInterval(function(){
 //  code logic
 // }, milliseconds);
+var timer;
 
 function TimeLoop(){
   alert("Time Loop function exection started");
 
-  setInterval(function(){
+  timer = setInterval(function(){
     alert("Time Loop code executed");
   }, 5000);
 }
+
+// clearInterval - It is used to stop the Set Interval loop 
+
+function stopInterval(){
+  clearInterval(timer);
+}
+
+// Storage 
+// 1. Local Storage 
+// 2. Session Storage 
+
+// Local Storage - Storing small value in browser permanently 
+// There are 4 types of actions - Inset value, Read value, Edit value, Delete value
+
+// Inset value
+// localStorage.setItem("key", value);
+
+localStorage.setItem("username", "karthick@gmail.com");
