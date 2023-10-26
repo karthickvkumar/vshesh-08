@@ -346,7 +346,8 @@ localStorage.setItem("age", 28);
 
 // Read value 
 // localStorage.getItem(key);
-var username = localStorage.getItem("username");
+// after taking this value, we can use variable to store it.
+localStorage.getItem("username");
 
 //Edit or Update value 
 // localStorage.setItem("existingkey", newValue);
@@ -384,3 +385,25 @@ sessionStorage.setItem("accountName", "kk");
 
 // 2. Delete a particular value
 // sessionStorage.removeItem("key");
+
+var student = { 
+  name : "mr.abc", age : 24 
+};
+
+var list = [ { 
+  name : "mr.abc", age : 24 
+}, { 
+  name : "mr.abc", age : 24 
+}];
+// To Store Object or Array into localStorage / sessionStorage
+// Convert Object / Array to String format 
+// JSON.stringify(variable);
+
+localStorage.setItem("student_object", JSON.stringify(student));
+localStorage.setItem("student_array", JSON.stringify(list));
+
+// Reconver from String formated Object / Array to Actual
+// JSON.parse(stringifyOutput);
+
+JSON.parse(localStorage.getItem("student_object"));
+JSON.parse(localStorage.getItem("student_array"));
