@@ -332,10 +332,31 @@ function stopInterval(){
 // 1. Local Storage 
 // 2. Session Storage 
 
-// Local Storage - Storing small value in browser permanently 
-// There are 4 types of actions - Inset value, Read value, Edit value, Delete value
+// Local Storage - Storing small value in browser permanently, max size if 5 MB to 13 MB 
+// There are 4 types of actions - Add value, Read value, Edit value, Delete value
 
-// Inset value
+// Add new value
 // localStorage.setItem("key", value);
+// value - Number, String and Boolean
 
 localStorage.setItem("username", "karthick@gmail.com");
+localStorage.setItem("first_name", "karthick");
+localStorage.setItem("last_name", "kumar");
+localStorage.setItem("age", 28);
+
+// Read value 
+// localStorage.getItem(key);
+var username = localStorage.getItem("username");
+
+//Edit or Update value 
+// localStorage.setItem("existingkey", newValue);
+localStorage.setItem("username", "vk@yahoo.com");
+
+// Delete Value 
+// 1. Delete All value
+localStorage.clear();
+
+// 2. Delete a particular value
+
+// localStorage.removeItem("key");
+localStorage.removeItem("last_name");
