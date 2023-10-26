@@ -360,3 +360,27 @@ localStorage.clear();
 
 // localStorage.removeItem("key");
 localStorage.removeItem("last_name");
+
+// Session Storage - Storing small value in browser temporary (till the use close brower tab), max size is 5 MB to 13 MB 
+// There are 4 types of actions - Add value, Read value, Edit value, Delete value
+
+// Add value 
+// sessionStorage.setItem("key", value);
+
+sessionStorage.setItem("accountName", "karthickkumar");
+
+// Read Value 
+// sessionStorage.getItem("key");
+
+sessionStorage.getItem("accountName");
+
+// Edit value
+// sessionStorage.setItem("existingkey", newValue);
+sessionStorage.setItem("accountName", "kk");
+
+// Delete Value 
+// 1. Delete All value
+// sessionStorage.clear();
+
+// 2. Delete a particular value
+// sessionStorage.removeItem("key");
