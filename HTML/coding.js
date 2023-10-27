@@ -435,3 +435,13 @@ nameList[1] = "mr.abc"
 // To delete a value from Array
 // array_variable_name.splice(index, deleteCount);
 nameList.splice(1, 1);
+
+// Setting up pre-request software insalltion for React JS
+// Download NODE JS
+
+// https://nodejs.org/en
+
+
+// Widows Search -> cmd -> Open Command Prompt  -> Type
+
+// npm install -g npx
