@@ -396,7 +396,7 @@ var list = [ {
   name : "mr.abc", age : 24 
 }];
 // To Store Object or Array into localStorage / sessionStorage
-// Convert Object / Array to String format 
+// Convert Object / Array to String form-at 
 // JSON.stringify(variable);
 
 localStorage.setItem("student_object", JSON.stringify(student));
@@ -407,3 +407,31 @@ localStorage.setItem("student_array", JSON.stringify(list));
 
 JSON.parse(localStorage.getItem("student_object"));
 JSON.parse(localStorage.getItem("student_array"));
+
+// Operation in Array
+var nameList = ["karthick", "kumar", "yuvaraj"]; 
+
+console.log(nameList);
+
+// To get number of record inside Array (getting count)
+// array_variable_name.length;
+console.log(nameList.length);
+
+// To Add new value into Array
+// array_variable_name.push(value);
+
+function addValueToArray(){
+  var name = prompt("Enter you name");
+  nameList.push(name);
+  alert(nameList);
+  console.log(nameList);
+}
+
+// To edit or modify existing value in Array
+// array_variable_name[index] = new value;
+
+nameList[1] = "mr.abc"
+
+// To delete a value from Array
+// array_variable_name.splice(index, deleteCount);
+nameList.splice(1, 1);
