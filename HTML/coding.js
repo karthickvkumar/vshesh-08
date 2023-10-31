@@ -441,7 +441,26 @@ nameList.splice(1, 1);
 
 // https://nodejs.org/en
 
+// To verify the installation of Node JS softrware 
+// Open command prompt 
+
+// node -v
 
 // Widows Search -> cmd -> Open Command Prompt  -> Type
 
 // npm install -g npx
+
+// To verify the installation of Node JS softrware 
+// Open command prompt 
+
+// npx -v
+
+// To create a new React JS Project 
+
+// npx create-react-app project-name 
+
+// To Run the created React JS project 
+// npm start
+
+// 18.0.2 
+// Major.Minior.Patch
