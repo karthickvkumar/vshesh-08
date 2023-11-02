@@ -4,16 +4,25 @@ import "../css/header.css";
 
 const HeaderSection = () => {
 
+  var textMessage = "Hello All!";
+
   const welcomeMessage = () => {
+    var messsage = "Hello! Everyone";
+    alert(messsage);
+  }
+
+  const dispalyMessage = () => {
     var messsage = "Hello! Everyone";
     alert(messsage);
   }
 
   return(
     <div>
-      <h2 className="heading-text">This is a Header Section</h2>
+      <h2>{textMessage}</h2>
+      <h2 className="heading-text">This is a Header Section {textMessage}</h2>
       
       <button onClick={() => welcomeMessage()}>Click here!</button>
+      <button onClick={() => dispalyMessage()} >Pint Message</button>
       
       <img src={require("../images/shinchan.png")} width="300" />
       <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Ultraviolette-Automotive-F77-071220221608.jpg&w=872&h=578&q=75&c=1" width="300" />
