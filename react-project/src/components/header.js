@@ -7,12 +7,12 @@ const HeaderSection = () => {
   var textMessage = "Hello All!";
 
   const welcomeMessage = () => {
-    var messsage = "Hello! Everyone";
+    let messsage = "Hello! Everyone";
     alert(messsage);
   }
 
   const dispalyMessage = () => {
-    var messsage = "Hello! Everyone";
+    let messsage = "Hello! Everyone";
     alert(messsage);
   }
 
