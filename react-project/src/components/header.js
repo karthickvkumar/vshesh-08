@@ -24,8 +24,8 @@ const HeaderSection = () => {
       <button onClick={() => welcomeMessage()}>Click here!</button>
       <button onClick={() => dispalyMessage()} >Pint Message</button>
       
-      <img src={require("../images/shinchan.png")} width="300" />
-      <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Ultraviolette-Automotive-F77-071220221608.jpg&w=872&h=578&q=75&c=1" width="300" />
+      <img src={require("../images/shinchan.png")} width="300" alt="shinchan" />
+      <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Ultraviolette-Automotive-F77-071220221608.jpg&w=872&h=578&q=75&c=1" width="300" alt="autocarindia" />
     </div>
   )
 }
