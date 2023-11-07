@@ -1,9 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 const LoginScreen = () => {
 
+  const [loginForm, updateLogin] = useState({
+    emailIdField : "",
+    passwordField : ""
+  })
+
   const getValueFromInput = (event) => {
-    console.log(event.target.value, event.target.id);
+    // console.log(event.target.value, event.target.id);
+    updateLogin({...loginForm, [event.target.id] : event.target.value });
+  }
+
+  const onLoginSubmit = () => {
+    console.log(loginForm)
   }
 
   return(
@@ -17,7 +27,7 @@ const LoginScreen = () => {
         <label>Enter your Password :</label>
         <input type="password" id="passwordField" placeholder="Enter your password" onChange={getValueFromInput} />
       </div>
-      <button>Login</button>
+      <button onClick={() => onLoginSubmit()}>Login</button>
     </div>
   )
 }
