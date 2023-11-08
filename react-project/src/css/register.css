@@ -1,0 +1,18 @@
+.space{
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.align-label{
+  display: inline-block;
+  width: 185px;
+}
+
+.register-btn{
+  background-color: #F44336;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
