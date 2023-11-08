@@ -1,45 +1,66 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "../css/register.css";
 
 const RegistationScreen = () => {
+
+  const [registerForm, updateRegister] = useState({
+    name : "",
+    email : "",
+    password : "",
+    date_of_birth : "",
+    gender : "",
+    hobbies : "",
+    qualification : "",
+    address : ""
+  })
+
+  const getValueFromInput = (event) => {
+    // console.log(event.target.value)
+    updateRegister({...registerForm, [event.target.id] : event.target.value });
+  }
+
+  const createAccout = () => {
+    console.log(registerForm);
+  }
+
   return(
     <div>
       <h1>Registation Page</h1>
       <div className="space">
         <label className="align-label">Enter your Name :</label>
-        <input type="text" placeholder="Enter your name" />
+        <input type="text" id="name" placeholder="Enter your name" onChange={getValueFromInput} />
       </div>
       <div className="space">
         <label className="align-label">Enter your Email ID :</label>
-        <input type="text" placeholder="Enter your email id" />
+        <input type="text" id="email" placeholder="Enter your email id" onChange={getValueFromInput}/>
       </div>
       <div className="space">
         <label className="align-label">Enter your Passoword :</label>
-        <input type="password" placeholder="Enter your password" />
+        <input type="password" id="password" placeholder="Enter your password" onChange={getValueFromInput}/>
       </div>
       <div className="space">
         <label className="align-label">Select your Date of Birth :</label>
-        <input type="date" />
+        <input type="date" id="date_of_birth" onChange={getValueFromInput} />
       </div>
       <div className="space">
         <label className="align-label">Select your Gender :</label>
-        <input type="radio" name="gender" />Male
-        <input type="radio" name="gender" />Female
-        <input type="radio" name="gender" />Others
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" />Male
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender"/>Female
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" />Others
       </div>
       <div className="space">
         <label className="align-label">Select your Hobbies :</label>
-        <input type="checkbox" />Cricket
-        <input type="checkbox" />Football
-        <input type="checkbox" />Hockey
-        <input type="checkbox" />Tennis
-        <input type="checkbox" />Chess
-        <input type="checkbox" />Baseball
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Cricket
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Football
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Hockey
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Tennis
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Chess
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Baseball
       </div>
       <div className="space">
         <label className="align-label">Select your Qualification :</label>
-        <select>
+        <select onChange={getValueFromInput} id="qualification">
           <option>Please choose any one value</option>
           <option>10th</option>
           <option>12th</option>
@@ -51,10 +72,10 @@ const RegistationScreen = () => {
       </div>
       <div className="space">
         <label className="align-label">Enter your Address :</label>
-        <textarea placeholder="Enter your address"></textarea>
+        <textarea placeholder="Enter your address" id="address" onChange={getValueFromInput}></textarea>
       </div>
       <div className="space">
-        <button className="register-btn">Create Account</button>
+        <button className="register-btn" onClick={() => createAccout()}>Create Account</button>
       </div>
     </div>
   )
