@@ -24,3 +24,10 @@ function App() {
 }
 
 export default App;
+
+// Naming Convention 
+
+// 1. Pascal Case - KarthickKumar (Component Name)
+// 2. Camel Case - karthickKumar (Variable or Function Name)
+// 3. Snake Case - karthick_kumar (Variable or Function Name)
+// 4. Kebab Case - karthick-kumar (HTML Attribute and CSS Class)

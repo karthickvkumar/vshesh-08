@@ -10,14 +10,19 @@ const RegistationScreen = () => {
     password : "",
     date_of_birth : "",
     gender : "",
-    hobbies : "",
+    hobbies : [],
     qualification : "",
     address : ""
   })
 
   const getValueFromInput = (event) => {
     // console.log(event.target.value)
-    updateRegister({...registerForm, [event.target.id] : event.target.value });
+    if(event.target.id === "hobbies"){
+      registerForm.hobbies.push(event.target.value);
+    }
+    else{
+      updateRegister({...registerForm, [event.target.id] : event.target.value });
+    }
   }
 
   const createAccout = () => {
@@ -45,18 +50,18 @@ const RegistationScreen = () => {
       </div>
       <div className="space">
         <label className="align-label">Select your Gender :</label>
-        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" />Male
-        <input type="radio" name="gender" onChange={getValueFromInput} id="gender"/>Female
-        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" />Others
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" value="Male"/>Male
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" value="Female"/>Female
+        <input type="radio" name="gender" onChange={getValueFromInput} id="gender" value="Others" />Others
       </div>
       <div className="space">
         <label className="align-label">Select your Hobbies :</label>
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Cricket
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Football
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Hockey
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Tennis
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Chess
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies"/>Baseball
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Cricket"/>Cricket
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Football"/>Football
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Hockey"/>Hockey
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Hockey"/>Hockey
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Chess"/>Chess
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Baseball"/>Baseball
       </div>
       <div className="space">
         <label className="align-label">Select your Qualification :</label>
