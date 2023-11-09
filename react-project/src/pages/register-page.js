@@ -18,7 +18,13 @@ const RegistationScreen = () => {
   const getValueFromInput = (event) => {
     // console.log(event.target.value)
     if(event.target.id === "hobbies"){
-      registerForm.hobbies.push(event.target.value);
+      if(event.target.checked){
+        registerForm.hobbies.push(event.target.value);
+      }
+      else{
+        let index = registerForm.hobbies.indexOf(event.target.value);
+        registerForm.hobbies.splice(index, 1);
+      }
     }
     else{
       updateRegister({...registerForm, [event.target.id] : event.target.value });
@@ -59,7 +65,7 @@ const RegistationScreen = () => {
         <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Cricket"/>Cricket
         <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Football"/>Football
         <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Hockey"/>Hockey
-        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Hockey"/>Hockey
+        <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Swiming"/>Swiming
         <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Chess"/>Chess
         <input type="checkbox" onChange={getValueFromInput} id="hobbies" value="Baseball"/>Baseball
       </div>
