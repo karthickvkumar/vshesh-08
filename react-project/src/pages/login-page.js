@@ -1,10 +1,11 @@
 import React, {useState} from "react";
+import axios from "axios";
 
 const LoginScreen = () => {
 
   const [loginForm, updateLogin] = useState({
-    emailIdField : "",
-    passwordField : ""
+    email : "",
+    password : ""
   })
 
   const getValueFromInput = (event) => {
@@ -13,7 +14,18 @@ const LoginScreen = () => {
   }
 
   const onLoginSubmit = () => {
-    console.log(loginForm)
+    // console.log(loginForm)
+    const url = "https://reqres.in/api/login";
+
+    axios.post(url, loginForm)
+      .then((response) => {
+        console.log(response);
+        alert("Successfully Login");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Invalid UserName or Password");
+      })
   }
 
   return(
@@ -21,11 +33,11 @@ const LoginScreen = () => {
       <h1>Login Page</h1>
       <div>
         <label>Enter your Email ID :</label>
-        <input type="text" id="emailIdField" placeholder="Enter your email Id" onChange={getValueFromInput} />
+        <input type="text" id="email" placeholder="Enter your email Id" onChange={getValueFromInput} />
       </div>
       <div>
         <label>Enter your Password :</label>
-        <input type="password" id="passwordField" placeholder="Enter your password" onChange={getValueFromInput} />
+        <input type="password" id="password" placeholder="Enter your password" onChange={getValueFromInput} />
       </div>
       <button onClick={() => onLoginSubmit()}>Login</button>
     </div>
