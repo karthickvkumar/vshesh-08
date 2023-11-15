@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const LoginScreen = () => {
+
+  const navigate = useNavigate();
 
   const [loginForm, updateLogin] = useState({
     email : "",
@@ -20,7 +23,8 @@ const LoginScreen = () => {
     axios.post(url, loginForm)
       .then((response) => {
         console.log(response);
-        alert("Successfully Login");
+        // alert("Successfully Login");
+        navigate("/details");
       })
       .catch((error) => {
         console.log(error);
