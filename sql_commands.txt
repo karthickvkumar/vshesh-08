@@ -1,0 +1,14 @@
+Online Database
+Website URL:https://www.db4free.net/phpMyAdmin/index.php
+Username: vcentry
+Password: test@123
+
+================================
+
+USE travelix;
+CREATE TABLE kk_table (firstname varchar(255), lastname varchar(255), age int(3), location varchar(255));
+
+================================
+
+USE travelix;
+INSERT INTO kk_table (firstname, lastname, age, location) VALUES ('karthick', 'kumar', 28, 'chennai');
