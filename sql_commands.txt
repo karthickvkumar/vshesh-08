@@ -12,3 +12,8 @@ CREATE TABLE kk_table (firstname varchar(255), lastname varchar(255), age int(3)
 
 USE travelix;
 INSERT INTO kk_table (firstname, lastname, age, location) VALUES ('karthick', 'kumar', 28, 'chennai');
+
+============================
+
+USE travelix;
+SELECT * FROM kk_table;
