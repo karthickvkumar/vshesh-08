@@ -8,6 +8,7 @@ import LoginScreen from "./pages/login-page";
 import ProfileScreen from "./pages/profile-page";
 import LandingScreen from "./pages/landing-page";
 import RegistationScreen from "./pages/register-page";
+import UserPage from "./pages/user-page";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="login" element={<LoginScreen></LoginScreen>}></Route>
         <Route path="details" element={<ProfileScreen></ProfileScreen>}></Route>
         <Route path="signup" element={<RegistationScreen></RegistationScreen>}></Route>
+        <Route path="user" element={<UserPage></UserPage>}></Route>
       </Routes>
     </BrowserRouter>
   );

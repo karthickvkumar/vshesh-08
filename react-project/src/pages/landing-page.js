@@ -13,6 +13,8 @@ const LandingScreen = () => {
       <NavLink to="/details">Go to Proile Page</NavLink>
       <br/>
       <NavLink to="/signup">Go to Registation Page</NavLink>
+      <br/>
+      <NavLink to="/user">Go to User List Page</NavLink>
     </div>
   )
 }

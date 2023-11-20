@@ -45,6 +45,20 @@ app.get("/api/user-list", (request, response) => {
   })
 })
 
+// URL : http://localhost:5000/api/submit-user
+// Method : POST
+app.post("/api/submit-user", (request, response) => {
+  const sql = `INSERT INTO kk_table (firstname, lastname, age, location) VALUES ('${request.body.firstname}', '${request.body.lastname}', ${parseInt(request.body.age)}, '${request.body.location}');`;
+
+  connection.query(sql, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send("User Account has been created");
+    }
+  })
+})
 
 const port = process.env.PORT || 5000;
 server.listen(port, () => {
