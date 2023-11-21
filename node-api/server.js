@@ -33,7 +33,7 @@ connection.connect((error) => {
 // API URL : http://localhost:5000/api/user-list
 // Method : GET
 app.get("/api/user-list", (request, response) => {
-  const sql_query = "SELECT * FROM kk_table;"
+  const sql_query = "SELECT * FROM vkk_table;"
 
   connection.query(sql_query, (error, result) => {
     if(error){
@@ -48,7 +48,7 @@ app.get("/api/user-list", (request, response) => {
 // API URL : http://localhost:5000/api/submit-user
 // Method : POST
 app.post("/api/submit-user", (request, response) => {
-  const sql = `INSERT INTO kk_table (firstname, lastname, age, location) VALUES ('${request.body.firstname}', '${request.body.lastname}', ${parseInt(request.body.age)}, '${request.body.location}');`;
+  const sql = `INSERT INTO vkk_table (firstname, lastname, age, location) VALUES ('${request.body.firstname}', '${request.body.lastname}', ${parseInt(request.body.age)}, '${request.body.location}');`;
 
   connection.query(sql, (error, result) => {
     if(error){
@@ -63,11 +63,11 @@ app.post("/api/submit-user", (request, response) => {
 // API URL : http://localhost:5000/api/delete/firstname
 // Method : DELETE
 
-app.delete("/api/delete/:firstname", (request, response) => {
+app.delete("/api/delete/:Id", (request, response) => {
 
-  const firstname = request.params.firstname;
+  const Id = request.params.Id;
 
-  const sql_query = `DELETE FROM kk_table WHERE firstname='${firstname}'`;
+  const sql_query = `DELETE FROM vkk_table WHERE Id='${Id}'`;
 
   connection.query(sql_query, (error, result) => {
     if(error){

@@ -23,6 +23,11 @@ SELECT * FROM kk_table;
 USE travelix;
 DELETE FROM kk_table WHERE firstname='zyan';
 
+===============================
+
+USE travelix;
+CREATE TABLE vkk_table (firstname varchar(255), lastname varchar(255), age int(3), location varchar(255),  Id int NOT NULL AUTO_INCREMENT, PRIMARY KEY(Id));
+
 
 
 

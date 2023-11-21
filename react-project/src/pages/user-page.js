@@ -41,8 +41,8 @@ const UserPage = () => {
       })
   }
 
-  const deleteUser = (firstname) => {
-    const url = "http://localhost:5000/api/delete/" + firstname;
+  const deleteUser = (Id) => {
+    const url = "http://localhost:5000/api/delete/" + Id;
     
     axios.delete(url)
     .then((response) => {
@@ -98,7 +98,7 @@ const UserPage = () => {
                   <td>{value.age}</td>
                   <td>{value.location}</td>
                   <td>
-                    <button onClick={() => deleteUser(value.firstname)}>delete</button>
+                    <button onClick={() => deleteUser(value.Id)}>delete</button>
                   </td>
                 </tr>
               )
