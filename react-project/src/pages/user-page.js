@@ -54,27 +54,37 @@ const UserPage = () => {
     })
   }
 
+  const editUser = (user) => {
+    updateUserForm({...userForm, 
+      firstname : user.firstname,
+      lastname : user.lastname,
+      age : user.age,
+      location : user.location
+    });
+  }
+
   return(
     <div>
       <h2>User List Page</h2>
       <div>
         <label>Enter your First Name :</label>
-        <input id="firstname" type="text" placeholder="Enter first name" onChange={getValuefromInput} />
+        <input id="firstname" type="text" placeholder="Enter first name" onChange={getValuefromInput} value={userForm.firstname} />
       </div>
       <div>
         <label>Enter your Last Name :</label>
-        <input id="lastname" type="text" placeholder="Enter last name" onChange={getValuefromInput}/>
+        <input id="lastname" type="text" placeholder="Enter last name" onChange={getValuefromInput} value={userForm.lastname}/>
       </div>
       <div>
         <label>Enter your Age :</label>
-        <input id="age" type="number" placeholder="Enter age" onChange={getValuefromInput}/>
+        <input id="age" type="number" placeholder="Enter age" onChange={getValuefromInput} value={userForm.age}/>
       </div>
       <div>
         <label>Enter your Location :</label>
-        <input id="location" type="text" placeholder="Enter Location" onChange={getValuefromInput}/>
+        <input id="location" type="text" placeholder="Enter Location" onChange={getValuefromInput} value={userForm.location}/>
       </div>
       <div>
         <button onClick={() => submitUser()}>Submit User</button>
+        <button onClick={() => submitUser()}>Update User</button>
       </div>
 
       <button onClick={() => loadUserList()}>Load User</button>
@@ -86,6 +96,7 @@ const UserPage = () => {
             <th>Age</th>
             <th>Location</th>
             <th>Delete</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -99,6 +110,9 @@ const UserPage = () => {
                   <td>{value.location}</td>
                   <td>
                     <button onClick={() => deleteUser(value.Id)}>delete</button>
+                  </td>
+                  <td>
+                    <button onClick={() => editUser(value)}>edit</button>
                   </td>
                 </tr>
               )

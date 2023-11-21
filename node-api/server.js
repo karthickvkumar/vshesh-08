@@ -60,7 +60,7 @@ app.post("/api/submit-user", (request, response) => {
   })
 })
 
-// API URL : http://localhost:5000/api/delete/firstname
+// API URL : http://localhost:5000/api/delete/id
 // Method : DELETE
 
 app.delete("/api/delete/:Id", (request, response) => {
