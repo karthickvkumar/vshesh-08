@@ -33,11 +33,25 @@ const UserPage = () => {
 
     axios.post(url, userForm)
       .then((response) => {
-        console.log(response.data);
+        alert(response.data);
+        loadUserList();
       })
       .catch((error) => {
         console.log(error);
       })
+  }
+
+  const deleteUser = (firstname) => {
+    const url = "http://localhost:5000/api/delete/" + firstname;
+    
+    axios.delete(url)
+    .then((response) => {
+      alert(response.data);
+      loadUserList();
+    })
+    .catch((error) => {
+      console.log(error);
+    })
   }
 
   return(
@@ -71,6 +85,7 @@ const UserPage = () => {
             <th>Last Name</th>
             <th>Age</th>
             <th>Location</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -82,6 +97,9 @@ const UserPage = () => {
                   <td>{value.lastname}</td>
                   <td>{value.age}</td>
                   <td>{value.location}</td>
+                  <td>
+                    <button onClick={() => deleteUser(value.firstname)}>delete</button>
+                  </td>
                 </tr>
               )
             })

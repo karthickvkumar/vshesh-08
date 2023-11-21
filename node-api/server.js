@@ -30,7 +30,7 @@ connection.connect((error) => {
   }
 });
 
-// URL : http://localhost:5000/api/user-list
+// API URL : http://localhost:5000/api/user-list
 // Method : GET
 app.get("/api/user-list", (request, response) => {
   const sql_query = "SELECT * FROM kk_table;"
@@ -45,7 +45,7 @@ app.get("/api/user-list", (request, response) => {
   })
 })
 
-// URL : http://localhost:5000/api/submit-user
+// API URL : http://localhost:5000/api/submit-user
 // Method : POST
 app.post("/api/submit-user", (request, response) => {
   const sql = `INSERT INTO kk_table (firstname, lastname, age, location) VALUES ('${request.body.firstname}', '${request.body.lastname}', ${parseInt(request.body.age)}, '${request.body.location}');`;
@@ -56,6 +56,25 @@ app.post("/api/submit-user", (request, response) => {
     }
     else{
       response.status(200).send("User Account has been created");
+    }
+  })
+})
+
+// API URL : http://localhost:5000/api/delete/firstname
+// Method : DELETE
+
+app.delete("/api/delete/:firstname", (request, response) => {
+
+  const firstname = request.params.firstname;
+
+  const sql_query = `DELETE FROM kk_table WHERE firstname='${firstname}'`;
+
+  connection.query(sql_query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send("User Account has been deleted");
     }
   })
 })
