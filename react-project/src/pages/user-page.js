@@ -55,12 +55,21 @@ const UserPage = () => {
   }
 
   const editUser = (user) => {
-    updateUserForm({...userForm, 
-      firstname : user.firstname,
-      lastname : user.lastname,
-      age : user.age,
-      location : user.location
-    });
+    updateUserForm({...userForm, ...user});
+  }
+
+  const modifyUser = () => {
+    // console.log(userForm);
+    const url = "http://localhost:5000/api/edit/user";
+
+    axios.put(url, userForm)
+    .then((response) => {
+      alert(response.data);
+      loadUserList();
+    })
+    .catch((error) => {
+      console.log(error);
+    })
   }
 
   return(
@@ -84,7 +93,7 @@ const UserPage = () => {
       </div>
       <div>
         <button onClick={() => submitUser()}>Submit User</button>
-        <button onClick={() => submitUser()}>Update User</button>
+        <button onClick={() => modifyUser()}>Update User</button>
       </div>
 
       <button onClick={() => loadUserList()}>Load User</button>

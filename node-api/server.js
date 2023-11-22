@@ -79,6 +79,22 @@ app.delete("/api/delete/:Id", (request, response) => {
   })
 })
 
+// API URL : http://localhost:5000/api/edit/user
+// Method : PUT
+
+app.put("/api/edit/user", (request, response) => {
+  const sql_query = `UPDATE vkk_table SET firstname='${request.body.firstname}', lastname='${request.body.lastname}', age=${parseInt(request.body.age)}, location='${request.body.location}' WHERE Id=${request.body.Id};`
+  
+  connection.query(sql_query, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send("User Account has been modified");
+    }
+  })
+})
+
 const port = process.env.PORT || 5000;
 server.listen(port, () => {
   console.log("Node js server is running");
